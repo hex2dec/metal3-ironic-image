@@ -69,6 +69,8 @@ wait_for_interface_or_ip()
         export IPV=4
         export IRONIC_URL_HOST="$IRONIC_IP"
     fi
+
+    export IRONIC_SOCAT_ADDRESS=${IRONIC_SOCAT_ADDRESS:-$IRONIC_IP}
 }
 
 render_j2_config()

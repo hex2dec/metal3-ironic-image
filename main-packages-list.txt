@@ -9,6 +9,7 @@ mod_ssl
 procps
 python3-jinja2
 qemu-img
+socat
 sqlite
 syslinux-nonlinux
 util-linux
