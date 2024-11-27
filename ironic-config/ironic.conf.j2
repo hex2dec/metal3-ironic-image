@@ -50,6 +50,11 @@ deploy_logs_local_path = /shared/log/ironic/deploy
 # See https://bugzilla.redhat.com/show_bug.cgi?id=1822763
 max_command_attempts = 30
 
+{% if env.IRONIC_AGENT_INSECURE == "true" %}
+verify_ca = false
+require_tls = false
+{% endif %}
+
 [api]
 {% if env.IRONIC_REVERSE_PROXY_SETUP == "true" %}
 {% if env.IRONIC_PRIVATE_PORT == "unix" %}
